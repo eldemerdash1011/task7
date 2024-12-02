@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem; 
+}
+
+.Forest {
+    background-image: url(../imges/Forest.jpg);
+}
+
+.Desert {
+    background-image: url(../imges/Deserte.jpg);
+}
+
+.Flower {
+    background-image: url(../imges/Flower.jpg);
+}
+
+.Canyon {
+    background-image: url(../imges/Canyon.jpg);
+}
+
+.Forest h1 {
+    animation: move0 2s alternate infinite;
+}
+
+.Desert h1 {
+    animation: move1 2s alternate infinite;
+}
+
+.Flower h1 {
+    animation: move2 3s linear infinite;
+}
+
+.Canyon h1 {
+    animation: move3 3s alternate infinite;
+}
+
+@keyframes move0 {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+@keyframes move1 {
+    0% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+}
+
+@keyframes move2 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes move3 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
